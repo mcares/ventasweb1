@@ -25,7 +25,7 @@
         <td><%= empresa.rubro %></td>
         <td><%= empresa.direccion %></td>
         <td><%= link_to 'Detalle', empresa %></td>
-          <% if current_usuario.email == empresa.usuario.email  %>
+          <% if current_usuario.email == @empresa.usuario.email  %>
         <td><%= link_to 'Editar', edit_empresa_path(empresa) %></td>
         <td><%= link_to 'Eliminar', empresa, method: :delete, data: { confirm: '¿Estas seguro de Eliminar la Empresa?' } %></td>
 <% end %>
