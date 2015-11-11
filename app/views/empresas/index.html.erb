@@ -19,6 +19,7 @@
   <tbody>
     <% @empresas.each do |empresa| %>
       <tr>
+        <% if current_usuario.email == post.usuario.email  %>
         <td><%= empresa.rut %></td>
         <td><%= empresa.nombre %></td>
         <td><%= empresa.rubro %></td>
